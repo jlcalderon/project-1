@@ -2,6 +2,8 @@
 
 //Variables used in the map
 let map, infoWindow;
+//Variables to grab user geolocation latitude and longitude
+const userLat, userLon;
 
 //callback function to initializ the map object
 function initMap() {
@@ -23,6 +25,8 @@ function initMap() {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
+            userLat = pos.lat;
+            userLon = pos.lng;
             //setting the position obtained with geolocation
             infoWindow.setPosition(pos);
             infoWindow.setContent('You are here Honeydew');
