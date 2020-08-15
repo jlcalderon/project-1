@@ -1,23 +1,63 @@
-/*************** For Google Maps API rendering *****************/
-
-
-/* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-
-#map {
-    margin: 5%;
-    height: 60%;
-}
-
-
-/* Optional: Makes the sample page fill the window. */
-
-html,
 body {
-    height: 100%;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #d9d9d9;
+    color: ;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    background: #f29f80;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.righty {
+    float: right;
+    width: 80%;
+    margin-top: 2%;
+}
+
+.righty input {
+    margin-left: 0.3rem;
+    margin-right: 2rem;
+}
+
+.btn {
+    padding: 7px 12px;
+    color: #fff;
+    background-color: lightblue;
+    margin-top: 2%;
+    border: none;
+    margin-left: 2%;
+    text-decoration: none;
+    font-family: sans-serif;
 }
 
 
-/*************** For Google Maps API rendering *****************/
+/* .maps {
+    margin: 20px;
+    background: #f29f80;
+    height: 900px;
+    width: 1200px;
+  }
+  
+  .mapsCard {
+    padding: 16px;
+    height: 350px;
+    width: 350px;
+    width: 1000px;
+  } */
+
+.column {
+    background: #113859;
+    height: 750px;
+    width: 750px;
+    padding: 10px;
+}
