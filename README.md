@@ -23,6 +23,6 @@ We used *Foundation* as our CSS database
 *Nasara H*<br>
 *Ryan Tervo*<br>
 ### Back End Team
-*Jorge Calderon*
-*Lierin Hanuman*
-*Caroline Pukenis*
+*Jorge Calderon*<br>
+*Lierin Hanuman*<br>
+*Caroline Pukenis*<br>
