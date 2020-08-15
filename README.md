@@ -19,9 +19,9 @@ We used *Foundation* as our CSS database
 
 ## Contributing
 ### Front End Team
-*Anusha Dhamera*
-*Nasara H*
-*Ryan Tervo*
+*Anusha Dhamera*<br>
+*Nasara H*<br>
+*Ryan Tervo*<br>
 ### Back End Team
 *Jorge Calderon*
 *Lierin Hanuman*
