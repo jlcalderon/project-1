@@ -2,6 +2,8 @@
 
 ![Will be .gif of website once working](https://github.com/caropukenis/project-1/blob/master/assets/honeydew.png?raw=true)
 
+[Website Link](https://caropukenis.github.io/project-1/)
+
 [Project 1 Distribution Doc](https://docs.google.com/document/d/1CCYAeF27QUyxrQqBTAXs6bHndoxuQcyzrcFDQe-ONII/edit)
 
 [Project 1 Initial Presentation](https://docs.google.com/presentation/d/1is0evU1E2aNyx8VhjWFkZaB0Qc9CzWLkPTYOrda1X-I/edit#slide=id.p)
