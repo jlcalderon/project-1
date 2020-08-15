@@ -49,6 +49,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.open(map);
 }
 
+// Trails
 $(".btn").on("click", function () {
 
   console.log(userLat, userLon);
@@ -64,5 +65,20 @@ $(".btn").on("click", function () {
         console.log(data);
         $(".dTrails").text(data.trails.name);
       },
+    });
+});
+
+// Open Weather
+$(document).on("click", "#button", function() {
+    console.log("clicked");
+    var search = $('#search');
+    var urlquery = 'https://api.openweathermap.org/data/2.5/weather?q=' + search.val() + '&units=imperial&appid=1460cf8db2b228c70ad455e11901c547';
+    $.ajax({
+        url: urlquery,
+        method: "GET"
+    }).then(function(response) {
+        $('.city').text(response.name);
+        $('.desc').text(response.main.temp);
+        $('.temp').text(response.weather[0].description);
     });
 });
