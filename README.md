@@ -20,7 +20,7 @@ We used *Foundation* as our CSS database
 ## Contributing
 ### Front End Team
 *Anusha Dhamera*<br>
-*Nasara H*<br>
+*Nasara Hassan*<br>
 *Ryan Tervo*<br>
 ### Back End Team
 *Jorge Calderon*<br>
