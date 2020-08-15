@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Day Trip Planner</title>
-    <!-- This scripts are here for google maps apis usage -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3Ow9fsvIUjJNN_Xu6aDGkoGqpEc_TfTA&callback=initMap" defer></script>
-    <!-- Initial personlized css styles file -->
-    <link rel="stylesheet" href="style.css">
-</head>
+    <!-- Calling local CSS file -->
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
   <body>
-     <!-- Here the google map is going to be rendered -->
+    <!-- Google Maps API -->
     <div id="map"></div>
-    <input class="latEntry" type="text" />
-    <input class="lonEntry" type="text" />
-    <button class="btn">Submit</button>
-    <div class="rList">
-      <span class="lat"></span>
-      <span class="lon"></span>
-    </div>
+    <!-- Hiking Project API -->
     <div class="displayData">
       <span class="dTrails"></span>
     </div>
+    <!-- Calling JQUERY -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="script.js"></script>
+    <!-- Calling local JS file -->
+    <script src="assets/script.js"></script>
+    <!-- Calling Google Maps API -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3Ow9fsvIUjJNN_Xu6aDGkoGqpEc_TfTA&callback=initMap"
+      defer
+    ></script>
   </body>
 </html>
