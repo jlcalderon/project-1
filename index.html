@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +10,20 @@
     <!-- Initial personlized css styles file -->
     <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
-    <!-- Here the google map is going to be rendered -->
+  <body>
+     <!-- Here the google map is going to be rendered -->
     <div id="map"></div>
-</body>
-<!-- Here calling javascript code to interact with google maps API -->
-<script src="maps.js"></script>
-
+    <input class="latEntry" type="text" />
+    <input class="lonEntry" type="text" />
+    <button class="btn">Submit</button>
+    <div class="rList">
+      <span class="lat"></span>
+      <span class="lon"></span>
+    </div>
+    <div class="displayData">
+      <span class="dTrails"></span>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
