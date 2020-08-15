@@ -19,10 +19,10 @@ We used *Foundation* as our CSS database
 
 ## Contributing
 ### Front End Team
-*Anusha Dhamera
-*Nasara H
-*Ryan Tervo
+*Anusha Dhamera*
+*Nasara H*
+*Ryan Tervo*
 ### Back End Team
-*Jorge Calderon
-*Lierin Hanuman
-*Caroline Pukenis
+*Jorge Calderon*
+*Lierin Hanuman*
+*Caroline Pukenis*
