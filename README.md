@@ -1,6 +1,6 @@
 ### Project 1
 
-![Will be .gif of website once working]()
+![Will be .gif of website once working](https://github.com/caropukenis/project-1/blob/master/assets/honeydew.png?raw=true)
 
 #Project 1 Distribution Doc
 https://docs.google.com/document/d/1CCYAeF27QUyxrQqBTAXs6bHndoxuQcyzrcFDQe-ONII/edit
