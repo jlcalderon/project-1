@@ -50,7 +50,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 }
 
 // hiking
-$(".btn").on("click", function () {
+$(".hikingBtn").on("click", function () {
     let latEntry = $("input.latEntry").val();
     let lonEntry = $("input.lonEntry").val();
   
