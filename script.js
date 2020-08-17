@@ -2,7 +2,7 @@
 let map, infoWindow;
 let BingMapAPIkey = 'ApOpGVS9mrvMVrJLvz6YkesBOxk9zLXZXh3q2LL0jtwmYvoA19KW55nu9f7lMtZC';
 //Variables to grab user geolocation latitude and longitude
-let userLat, userLon;​
+/* let userLat, userLon;​ */
 //callback function to initializ the map object
 function initMap() {
     "use strict";
