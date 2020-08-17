@@ -1,3 +1,4 @@
+"use strict";
 //Variables used in the map
 let map, infoWindow;
 //Variables to grab user geolocation latitude and longitude
