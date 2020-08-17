@@ -7,34 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
     <title>Day Planner - Project 1</title>
-    
 </head>
 
 <body>
-    <!-- Header is here -->
+
+    <!--Header Start -->
     <header>
         <div class="container">
             <div class="head">
                 <h1>Travel Project</h1>
+                <!-- random picture here-->
+                <img src="assets/Night-Malaysia.jpg" alt="">
+                <div class="caption center-align">
+                    <h5> Explore The World!</h5>
+                </div>
             </div>
         </div>
+
     </header>
-    <showcase>
-        <div class="container">
-            <div class="righty">
-                <i>Where:</i>
-                <input type="text" placeholder="Destination" />
-                <i>Price range:</i>
-                <input type="text" placeholder="Enter Price" />
-                <a href="#" type="button" class="btn">Search</a>
-            </div>
-    </showcase>
+    <!-- Header End -->
+
+    <!-- Search Input Start -->
+    <form>
+        <div class="form-box">
+            <input type="text" class="search-field destination" placeholder="Search Destination">
+            <br>
+            <input type="text" class="search-field price" placeholder="Search Price">
+            <button class="search-btn" type="button">Search</button>
+        </div>
+
+    </form>
+    <!-- Search Input Ends -->
+
     <div class="grid-container">
         <div class="grid-x">
             <!-- Maps -->
             <div class="cell small-4">
+                Hiking
                 <section class="maps">
-                    <div class="mapsCard-div">
+                    <div class="mapsCard">
                         <div class="card-divider">
                             <h4>Maps</h4>
                             <div class="column">
@@ -43,8 +54,31 @@
                             </div>
                         </div>
                     </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </section>
+    <div class="cell small-4">
+        Resturant
+        <article class="maps">
+            <div class="mapsCard">
+                <div class="card-divider">
+                    <h4>Maps</h4>
+                    <div class="column"></div>
+                </div>
+            </div>
+    </div>
+    </article>
+    </div>
+    <div class="cell small-4">
+        Weather
+        <section class="maps">
+            <div class="mapsCard">
+                <div class="card-divider">
+                    <h4>Maps</h4>
+                    <div class="column"></div>
                 </section>
-                <!-- Hiking -->
                 <!-- Hiking -->
         <input type="text" class="latEntry"></input>
         <input type="text" class="lonEntry"></input>
@@ -150,17 +184,19 @@
                     </section>
                 </div>
             </div>
-            <footer>
-                <div class="footer"></div>
-            </footer>
-            <!-- <div class="grid-x">
-            <div class="cell small-4"></div> -->
-        </div>
     </div>
+    </section>
+    </div>
+    </div>
+
+    <!-- Footer Start -->
+    <footer class="section grey darken-2 white-text center">
+        <p class="flow-text"> Travel Project 2020 </p>
+    </footer>
+    <!-- Footer End -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
     <script src="assets/script.js"></script>
-    
 </body>
 
 </html>
