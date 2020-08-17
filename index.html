@@ -2,90 +2,188 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- OUR Personalized CSS -->
     <link rel="stylesheet" href="assets/style.css" />
-    <!-- Importing Foundation CSS library -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
     <title>Day Planner - Project 1</title>
-
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3Ow9fsvIUjJNN_Xu6aDGkoGqpEc_TfTA&callback=initMap" defer></script>
+    <script src="assets/script.js"></script>
 </head>
 
 <body>
-    <!-- Header is here -->
+
+    <!--Header Start -->
     <header>
         <div class="container">
             <div class="head">
                 <h1>Travel Project</h1>
+                <!-- random picture here-->
+                <img src="assets/Night-Malaysia.jpg" alt="">
+                <div class="caption center-align">
+                    <h5> Explore The World!</h5>
+                </div>
             </div>
         </div>
+
     </header>
-    <showcase>
-        <div class="container">
-            <div class="righty">
-                <i>Where:</i>
-                <input type="text" placeholder="Destination" />
-                <i>Price range:</i>
-                <input type="text" placeholder="Enter Price" />
-                <a href="#" type="button" class="btn">Search</a>
+    <!-- Header End -->
+
+    <!-- Search Input Start -->
+    <form>
+        <div class="form-box">
+            <input type="text" class="search-field destination" placeholder="Search Destination">
+            <br>
+            <input type="text" class="search-field price" placeholder="Search Price">
+            <button class="search-btn" type="button">Search</button>
+        </div>
+
+    </form>
+    <!-- Search Input Ends -->
+    <br>
+    <!-- Maps -->
+    <div class="cell small-4">
+        <section class="maps">
+            <div class="mapsCard">
+                <div class="card-divider">
+                    <h4>Maps</h4>
+                    <div class="column">
+                        <!-- Here the map is going to be rendered -->
+                        <div id="map"></div>
+                    </div>
+                </div>
             </div>
-    </showcase>
-    <div class="grid-container">
-        <div class="grid-x">
-            <!-- Maps -->
-            <div class="cell small-4">
-                <section class="maps">
-                    <div class="mapsCard-div">
-                        <div class="card-divider">
-                            <h4>Maps</h4>
-                            <div class="column">
-                                <!-- Here the map is going to be rendered -->
-                                <div id="map"></div>
+    </div>
+    </div>
+    </section>
+    <br>
+    <div class="cell small-4">
+        <section class="maps">
+            <div class="mapsCard">
+                <div class="card-divider">
+                    <h4>Trail Finder</h4>
+                    <div class="column">
+                        <!-- Hiking -->
+                        <input type="text" class="latEntry"></input>
+                        <input type="text" class="lonEntry"></input>
+                        <button class="hikingBtn">Submit</button>
+                        <div class="portfolio-resume-scrolling-container row">
+                            <div class="columns small-12 medium-7 portfolio-resume-scrolling">
+                                <ul class="portfolio-resume-side-list">
+                                    <li class="t1name">Trail Name</li>
+                                    <li class="t1difficulty">Trail Difficulty</li>
+                                    <li class="t1rating">Trail Rating</li>
+                                    <li class="t1location">Trail Location</li>
+                                    <li class="t1length">Trail Length</li>
+                                    <li class="t1condition">Trail Condition</li>
+                                    <li class="t1img"><img src="" alt="trail 1 image"></li>
+                                </ul>
+                                <ul class="portfolio-resume-side-list">
+                                    <li class="t2name">Trail Name</li>
+                                    <li class="t2difficulty">Trail Difficulty</li>
+                                    <li class="t2rating">Trail Rating</li>
+                                    <li class="t2location">Trail Location</li>
+                                    <li class="t2length">Trail Length</li>
+                                    <li class="t2condition">Trail Condition</li>
+                                </ul>
+                                <ul class="portfolio-resume-side-list">
+                                    <li class="t3name">Trail Name</li>
+                                    <li class="t3difficulty">Trail Difficulty</li>
+                                    <li class="t3rating">Trail Rating</li>
+                                    <li class="t3location">Trail Location</li>
+                                    <li class="t3length">Trail Length</li>
+                                    <li class="t3condition">Trail Condition</li>
+                                </ul>
+                                <ul class="portfolio-resume-side-list">
+                                    <li class="t4name">Trail Name</li>
+                                    <li class="t4difficulty">Trail Difficulty</li>
+                                    <li class="t4rating">Trail Rating</li>
+                                    <li class="t4location">Trail Location</li>
+                                    <li class="t4length">Trail Length</li>
+                                    <li class="t4condition">Trail Condition</li>
+                                </ul>
+                                <ul class="portfolio-resume-side-list">
+                                    <li class="t5name">Trail Name</li>
+                                    <li class="t5difficulty">Trail Difficulty</li>
+                                    <li class="t5rating">Trail Rating</li>
+                                    <li class="t5location">Trail Location</li>
+                                    <li class="t5length">Trail Length</li>
+                                    <li class="t5condition">Trail Condition</li>
+                                </ul>
+                                <ul class="portfolio-resume-side-list">
+                                    <li class="t6name">Trail Name</li>
+                                    <li class="t6difficulty">Trail Difficulty</li>
+                                    <li class="t6rating">Trail Rating</li>
+                                    <li class="t6location">Trail Location</li>
+                                    <li class="t6length">Trail Length</li>
+                                    <li class="t6condition">Trail Condition</li>
+                                </ul>
+                                <ul class="portfolio-resume-side-list">
+                                    <li class="t7name">Trail Name</li>
+                                    <li class="t7difficulty">Trail Difficulty</li>
+                                    <li class="t7rating">Trail Rating</li>
+                                    <li class="t7location">Trail Location</li>
+                                    <li class="t7length">Trail Length</li>
+                                    <li class="t7condition">Trail Condition</li>
+                                </ul>
+                                <ul class="portfolio-resume-side-list">
+                                    <li class="t8name">Trail Name</li>
+                                    <li class="t8difficulty">Trail Difficulty</li>
+                                    <li class="t8rating">Trail Rating</li>
+                                    <li class="t8location">Trail Location</li>
+                                    <li class="t8length">Trail Length</li>
+                                    <li class="t8condition">Trail Condition</li>
+                                </ul>
+                                <ul class="portfolio-resume-side-list">
+                                    <li class="t9name">Trail Name</li>
+                                    <li class="t9difficulty">Trail Difficulty</li>
+                                    <li class="t9rating">Trail Rating</li>
+                                    <li class="t9location">Trail Location</li>
+                                    <li class="t9length">Trail Length</li>
+                                    <li class="t9condition">Trail Condition</li>
+                                </ul>
+                                <ul class="portfolio-resume-side-list">
+                                    <li class="t10name">Trail Name</li>
+                                    <li class="t10difficulty">Trail Difficulty</li>
+                                    <li class="t10rating">Trail Rating</li>
+                                    <li class="t10location">Trail Location</li>
+                                    <li class="t10length">Trail Length</li>
+                                    <li class="t10condition">Trail Condition</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                </section>
-                <!-- Hiking -->
-                <div class="cell small-4">
-                    <article class="maps">
-                        <div class="mapsCard-div">
-                            <div class="card-divider">
-                                <h4>Maps</h4>
-                                <div class="column"></div>
-                            </div>
+        </section>
+        <br>
+        <!-- Weather -->
+        <div class="cell small-4">
+            <section class="maps">
+                <div class="mapsCard">
+                    <div class="card-divider">
+                        <h4>Weather</h4>
+                        <div class="column">
+                            <p class="desc"></p>
+                            <p class="temp"> </p>
+                            <p class="wind"></p>
                         </div>
-                    </article>
+                    </div>
                 </div>
-                <!-- Weather -->
-                <div class="cell small-4">
-                    <section class="maps">
-                        <div class="mapsCard">
-                            <div class="card-divider">
-                                <h4>Weather</h4>
-                                <div class="column">
-                                    <p class="temp"> </p>
-                                    <p class="clouds"></p>
-                                    <p class="desc"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            <footer>
-                <div class="footer"></div>
-            </footer>
-            <!-- <div class="grid-x">
-            <div class="cell small-4"></div> -->
+            </section>
         </div>
+        </div>
+        </div>
+        </section>
     </div>
+    </div>
+
+    <!-- Footer Start -->
+    <footer class="section grey darken-2 white-text center">
+        <p class="flow-text"> Travel Project 2020 </p>
+    </footer>
+    <!-- Footer End -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
-    <script src="assets/script.js"></script>
-    <!-- Importing the GoogleMaps API -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3Ow9fsvIUjJNN_Xu6aDGkoGqpEc_TfTA&callback=initMap" defer></script>
 </body>
 
 </html>
