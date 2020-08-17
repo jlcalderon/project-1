@@ -1,19 +1,18 @@
-"use strict";
 //Variables used in the map
 let map, infoWindow;
+let BingMapAPIkey = 'ApOpGVS9mrvMVrJLvz6YkesBOxk9zLXZXh3q2LL0jtwmYvoA19KW55nu9f7lMtZC';
 //Variables to grab user geolocation latitude and longitude
 let userLat, userLon;​
 //callback function to initializ the map object
 function initMap() {
-    map = new google.maps.Map(document.getElementById("map"), {
-        center: {
-            lat: 44.8082335,
-            lng: -93.3368165
-        },
-        zoom: 15
-    });​
-    //creating the new infoWindow object in map and assigning to our variable
+    "use strict";
+    var map = new Microsoft.Maps.Map('#map');
+
+
+}
+/*     //creating the new infoWindow object in map and assigning to our variable
     infoWindow = new google.maps.InfoWindow;​
+    
     //Getting user's Geolocation from their web browser
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
@@ -44,7 +43,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         'Error: The Geolocation service failed.' :
         'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(map);
-}
+} */
 
 // hiking
 $(".hikingBtn").on("click", function() {
