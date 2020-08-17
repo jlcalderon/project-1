@@ -1,10 +1,9 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background-color: #d9d9d9;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #d9d9d9;
 }
-
 
 /* .container {
     width: 80%;
@@ -15,58 +14,59 @@ body {
 } */
 
 .head {
-    margin: auto;
-    text-align: center;
+  margin: auto;
+  text-align: center;
 }
 
 header {
-    background-color: #fff;
-    padding: 18px;
+  background-color: #fff;
+  padding: 18px;
 }
 
 .search-btn {
-    height: 50px;
-    width: 150px;
-    background: #f29f80;
-    border: none;
-    outline: none;
-    color: #000;
-    font-size: 18px;
-    border-radius: 20px;
+  height: 50px;
+  width: 150px;
+  background: #f29f80;
+  border: none;
+  outline: none;
+  color: #000;
+  font-size: 18px;
+  border-radius: 20px;
 }
 
 .search-btn:hover {
-    background: #bf533b;
-    cursor: pointer;
+  background: #bf533b;
+  cursor: pointer;
 }
 
 .form-box {
-    background: #113859;
-    padding: 30px;
+  background: #113859;
+  padding: 30px;
 }
 
-.form-text {}
+.form-text {
+}
 
 .maps {
-    margin: 0 auto;
-    background: #f29f80;
-    height: 900px;
-    width: 1200px;
-    display: flex;
+  margin: 0 auto;
+  background: #f29f80;
+  height: 900px;
+  width: 1200px;
+  display: flex;
 }
 
 .mapsCard {
-    padding: 16px;
-    height: 350px;
-    width: 350px;
-    width: 1000px;
+  padding: 16px;
+  height: 350px;
+  width: 350px;
+  width: 1000px;
 }
 
 .flow-text {
-    margin-bottom: 70px;
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-align: center;
+  margin-bottom: 70px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-align: center;
 }
 /* hiking scroll box */
 .portfolio-resume-overview {
