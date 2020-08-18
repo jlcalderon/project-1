@@ -4,22 +4,17 @@ let map, infoWindow;
 //Variables to grab user geolocation latitude and longitude
 /* let userLat, userLon;​ */
 //callback function to initializ the map object
-initMap();
 
-function initMap() {
-    //var map = new Microsoft.Maps.Map('#map');
-    var map = L.map('map').setView([51.505, -0.09], 14);
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        maxZoom: 18,
-        id: 'mapbox/streets-v11',
-        tileSize: 512,
-        zoomOffset: -1,
-        accessToken: 'pk.eyJ1Ijoiam9yZ2UtY2FsZGVyb24xIiwiYSI6ImNrZHpiN2l3azJqbzIydG55cHM3djhjMW0ifQ.GDahyKqMw0JTip33YyGVjw'
-    }).addTo(map);
-
-}
-
+//var map = new Microsoft.Maps.Map('#map');
+var map = L.map('map').setView([51.505, -0.09], 14);
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1Ijoiam9yZ2UtY2FsZGVyb24xIiwiYSI6ImNrZHpiN2l3azJqbzIydG55cHM3djhjMW0ifQ.GDahyKqMw0JTip33YyGVjw'
+}).addTo(map);
 
 // hiking
 $(".hikingBtn").on("click", function() {
