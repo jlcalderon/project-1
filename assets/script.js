@@ -1,4 +1,4 @@
-//sectionsions API Functions
+//Map API Functions
 let map, infoWindow, userLat, userLon;
 var pos;
 //Initializing the map object
@@ -23,7 +23,18 @@ function initMap() {
 
             infoWindow.setPosition(pos);
             infoWindow.setContent('You are here!');
-            infoWindow.open(map);
+            //infoWindow.open(map);
+            var marker = new google.maps.Marker({
+                position: pos,
+                map: map,
+                title: "You are here"
+            });
+
+            marker.addListener("click", () => {
+                infoWindow.open(map, marker);
+                console.log(JSON.stringify(marker.position));
+            });
+
             map.setCenter(pos);
             console.log(`users lat: ${userLat} , users lng: ${userLon}`);
         }, function() {
