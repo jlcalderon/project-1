@@ -16,13 +16,16 @@ $(".hikingBtn").on("click", function () {
       type: "GET",
       success: function (data) {
         console.log(data);
+
+        let trail1img = data.trails[0].imgSmall;
+        console.log(trail1img);
         // trail 1
         $(".t1name").text(data.trails[0].name);
         $(".t1difficulty").text(data.trails[0].difficulty);
         $(".t1rating").text(data.trails[0].stars);
         $(".t1location").text(data.trails[0].location);
         $(".t1length").text(data.trails[0].length);
-        $("t1img").attr("src", data.trails[0].imgSmall);
+        $("t1img").html("<img src=" + trail1img + "></img>");
         // trail 2
         $(".t2name").text(data.trails[1].name);
         $(".t2difficulty").text(data.trails[1].difficulty);
