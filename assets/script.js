@@ -22,7 +22,7 @@ $(".hikingBtn").on("click", function () {
         $(".t1rating").text(data.trails[0].stars);
         $(".t1location").text(data.trails[0].location);
         $(".t1length").text(data.trails[0].length);
-        $("t1img").attr("src", data.trails[0].imgSmallMed);
+        $("t1img").attr("src", data.trails[0].imgSmall);
         // trail 2
         $(".t2name").text(data.trails[1].name);
         $(".t2difficulty").text(data.trails[1].difficulty);
@@ -36,7 +36,7 @@ $(".hikingBtn").on("click", function () {
         $(".t3rating").text(data.trails[2].stars);
         $(".t3location").text(data.trails[2].location);
         $(".t3length").text(data.trails[2].length);
-        $("t3img").attr("src='" + data.trails[2].imgSmallMed + "'/>");
+        $("t3img").attr("src='" + data.trails[2].imgSmallMed);
         // trail 4
         $(".t4name").text(data.trails[3].name);
         $(".t4difficulty").text(data.trails[3].difficulty);
