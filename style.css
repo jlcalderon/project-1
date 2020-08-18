@@ -44,14 +44,14 @@ header h1 {
 } */
 
 
-/* .maps {
+/* .sections {
       margin: 20px;
       background: #f29f80;
       height: 900px;
       width: 1200px;
     }
     
-    .mapsCard {
+    .sectionsCard {
       padding: 16px;
       height: 350px;
       width: 350px;
@@ -59,8 +59,8 @@ header h1 {
     } */
 
 #map {
-    height: 200px;
-    width: 200px;
+    height: 45%;
+    width: 100%;
 }
 
 

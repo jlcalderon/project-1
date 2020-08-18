@@ -2,19 +2,18 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
-    <!-- CSS styling of leaflet maps -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
-
-
     <title>Day Planner - Project 1</title>
+    <!-- Calling google sections api -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzGskOH17cENtd_IFBd9wLhSTfhC7vxls&callback=initMap" defer></script>
+    <!-- Calling our css stylesheet-->
+    <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
-
 
     <!--Header Start -->
     <header>
@@ -40,29 +39,27 @@
             <input type="text" class="search-field price" placeholder="Search Price">
             <button class="search-btn" type="button">Search</button>
         </div>
-
     </form>
     <!-- Search Input Ends -->
     <br>
-    <!-- Maps -->
+    <!-- sections -->
     <div class="cell small-4">
-        <section class="maps">
-            <div class="mapsCard">
+        <section class="sections">
+            <div class="sectionsCard">
                 <div class="card-divider">
-                    <h4>Maps</h4>
                     <div class="column">
                         <!-- Here the map is going to be rendered -->
-                        <div id="map"></div>
+                        <div id="map" style="height: 450px; width: 925px; margin-bottom: 5px;"></div>
                     </div>
                 </div>
             </div>
+        </section>
     </div>
-    </div>
-    </section>
+
     <br>
     <div class="cell small-4">
-        <section class="maps">
-            <div class="mapsCard">
+        <section class="sections">
+            <div class="sectionsCard">
                 <div class="card-divider">
                     <h4>Trail Finder</h4>
                     <div class="column">
@@ -156,12 +153,14 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
         </section>
         <br>
         <!-- Weather -->
         <div class="cell small-4">
-            <section class="maps">
-                <div class="mapsCard">
+            <section class="sections">
+                <div class="sectionsCard">
                     <div class="card-divider">
                         <h4>Weather</h4>
                         <div class="column">
@@ -173,23 +172,14 @@
                 </div>
             </section>
         </div>
-        </div>
-        </div>
-        </section>
-    </div>
-    </div>
-
-    <!-- Footer Start -->
-    <footer class="section grey darken-2 white-text center">
-        <p class="flow-text"> Travel Project 2020 </p>
-    </footer>
-    <!-- Footer End -->
+        <!-- Footer Start -->
+        <footer class="section grey darken-2 white-text center">
+            <p class="flow-text"> Travel Project 2020 </p>
+        </footer>
+        <!-- Footer End -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+        <script src="assets/script.js"></script>
 </body>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
-<!-- Make sure you put this AFTER Leaflet's CSS -->
-<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
-<script src="script.js"></script>
 
 </html>
