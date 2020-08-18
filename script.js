@@ -1,68 +1,24 @@
-//Map API Functions
-let map, infoWindow, userLat, userLon;
-var pos;
-//Initializing the map object
-function initMap() {
-    map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 44.8115263, lng: -93.3288194 },
-        zoom: 15
-    });
-    //creating the infowindow element to display location
-    infoWindow = new google.maps.InfoWindow;
-
-    // Try HTML5 geolocation. Getting users's current geolocation
-    if (navigator.geolocation) { //The next lines are going to be executed only if the users allow the browser to grab their location
-        navigator.geolocation.getCurrentPosition(function(position) {
-            pos = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
-            //Filling variables to get users current location and use it later for the weather and hiking api's
-            userLat = pos.lat;
-            userLon = pos.lng;
-
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('You are here!');
-            //infoWindow.open(map);
-            var marker = new google.maps.Marker({
-                position: pos,
-                map: map,
-                title: "You are here"
-            });
-
-            marker.addListener("click", () => {
-                infoWindow.open(map, marker);
-                console.log(JSON.stringify(marker.position));
-            });
-
-            map.setCenter(pos);
-            console.log(`users lat: ${userLat} , users lng: ${userLon}`);
-        }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-        });
-    } else {
-        // Browser doesn't support Geolocation
-        handleLocationError(false, infoWindow, map.getCenter());
-    }
-
-
-}
-//Handling errors of geolocation with API methods
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-    infoWindow.setPosition(pos);
-    infoWindow.setContent(browserHasGeolocation ?
-        'Error: The Geolocation service failed.' :
-        'Error: Your browser doesn\'t support geolocation.');
-    infoWindow.open(map);
-}
-//Printing users location before user click allow the browser get my location
-console.log(`users lat: ${userLat} , users lng: ${userLon}`);
+//Variables used in the map
+//let map, infoWindow;
+//let BingMapAPIkey = 'ApOpGVS9mrvMVrJLvz6YkesBOxk9zLXZXh3q2LL0jtwmYvoA19KW55nu9f7lMtZC';
+//Variables to grab user geolocation latitude and longitude
+/* let userLat, userLon;​ */
+//callback function to initializ the map object
+//var map = new Microsoft.sections.Map('#map');
+var map = L.map('map').setView([51.505, -0.09], 14);
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1Ijoiam9yZ2UtY2FsZGVyb24xIiwiYSI6ImNrZHpiN2l3azJqbzIydG55cHM3djhjMW0ifQ.GDahyKqMw0JTip33YyGVjw'
+}).addTo(map);
 
 // hiking
 $(".hikingBtn").on("click", function() {
     let latEntry = $("input.latEntry").val();
     let lonEntry = $("input.lonEntry").val();
-    console.log("clicked");
 
     console.log(latEntry, lonEntry);
     if (latEntry && lonEntry != "") {
@@ -81,7 +37,7 @@ $(".hikingBtn").on("click", function() {
                 $(".t1rating").text(data.trails[0].stars);
                 $(".t1location").text(data.trails[0].location);
                 $(".t1length").text(data.trails[0].length);
-                $("t1img").attr("src", data.trails[0].imgSmall);
+                $("t1img").attr("src", data.trails[0].imgSmallMed);
                 // trail 2
                 $(".t2name").text(data.trails[1].name);
                 $(".t2difficulty").text(data.trails[1].difficulty);
@@ -95,7 +51,7 @@ $(".hikingBtn").on("click", function() {
                 $(".t3rating").text(data.trails[2].stars);
                 $(".t3location").text(data.trails[2].location);
                 $(".t3length").text(data.trails[2].length);
-                $("t3img").attr("src='" + data.trails[2].imgSmallMed);
+                $("t3img").attr("src='" + data.trails[2].imgSmallMed + "'/>");
                 // trail 4
                 $(".t4name").text(data.trails[3].name);
                 $(".t4difficulty").text(data.trails[3].difficulty);
@@ -155,17 +111,14 @@ $(".hikingBtn").on("click", function() {
 // weather
 $(document).on("click", ".btn", function() {
     console.log("clicked");
-    var search = $("#city");
-    var urlquery =
-        "https://api.openweathermap.org/data/2.5/weather?q=" +
-        search.val() +
-        "&units=imperial&appid=1460cf8db2b228c70ad455e11901c547";
+    var search = $('#city');
+    var urlquery = 'https://api.openweathermap.org/data/2.5/weather?q=' + search.val() + '&units=imperial&appid=1460cf8db2b228c70ad455e11901c547';
     $.ajax({
         url: urlquery,
-        method: "GET",
+        method: "GET"
     }).then(function(response) {
-        $(".temp").text("Current Weather: " + response.weather[0].description);
-        $(".desc").text("temperature: " + response.main.temp);
-        $(".wind").text("Curret Windspeed: " + response.wind.speed);
+        $('.temp').text("Current Weather: " + response.weather[0].description);
+        $('.desc').text("temperature: " + response.main.temp);
+        $('.wind').text("Curret Windspeed: " + response.wind.speed)
     });
 });
