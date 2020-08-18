@@ -1,11 +1,25 @@
 //Variables used in the map
 let map, infoWindow;
-let BingMapAPIkey = 'ApOpGVS9mrvMVrJLvz6YkesBOxk9zLXZXh3q2LL0jtwmYvoA19KW55nu9f7lMtZC';
+//let BingMapAPIkey = 'ApOpGVS9mrvMVrJLvz6YkesBOxk9zLXZXh3q2LL0jtwmYvoA19KW55nu9f7lMtZC';
 //Variables to grab user geolocation latitude and longitude
 /* let userLat, userLon;​ */
 //callback function to initializ the map object
-function GetMap() {
-    var map = new Microsoft.Maps.Map('#map');
+initMap();
+
+function initMap() {
+    //var map = new Microsoft.Maps.Map('#map');
+    var map = L.map('map').setView([51.505, -0.09], 14);
+    var accessToken = 'sk.eyJ1Ijoiam9yZ2UtY2FsZGVyb24xIiwiYSI6ImNrZHpha3c0bzJqdzIyc255Z21rd2N0N3cifQ.H2gMTZ0_fbhDl-Q-hYxvBg';
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={' + accessToken +
+        '}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'your.mapbox.access.token'
+        }).addTo(map);
+
 }
 
 
