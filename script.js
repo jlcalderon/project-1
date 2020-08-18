@@ -4,7 +4,6 @@
 //Variables to grab user geolocation latitude and longitude
 /* let userLat, userLon;​ */
 //callback function to initializ the map object
-
 //var map = new Microsoft.Maps.Map('#map');
 var map = L.map('map').setView([51.505, -0.09], 14);
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
