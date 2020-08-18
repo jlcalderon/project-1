@@ -4,8 +4,7 @@ let BingMapAPIkey = 'ApOpGVS9mrvMVrJLvz6YkesBOxk9zLXZXh3q2LL0jtwmYvoA19KW55nu9f7
 //Variables to grab user geolocation latitude and longitude
 /* let userLat, userLon;​ */
 //callback function to initializ the map object
-function getMap() {
-
+function GetMap() {
     var map = new Microsoft.Maps.Map('#map');
 }
 
