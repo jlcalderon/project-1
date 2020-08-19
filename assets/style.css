@@ -20,18 +20,6 @@ button {
   color: #011640;
   padding: 20px;
 }
-.head {
-  margin: auto;
-  text-align: center;
-}
-header {
-  background-color: #011640;
-  padding: 5px;
-  font-size: 25px;
-  border-radius: 30px;
-  margin: 0;
-  padding: 0;
-}
 .content-wrapper img {
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url(Night-Malaysia.jpg);
@@ -67,12 +55,6 @@ header {
   padding: 16px;
   height: 400px;
   width: 1000px;
-}
-.flow-text {
-  margin-bottom: 70px;
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-align: center;
 }
 /* hiking scroll box */
 ul {
