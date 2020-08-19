@@ -104,63 +104,63 @@ function hikingTrailsCall(lat, lng) {
     $(".t2rating").text(data.trails[1].stars);
     $(".t2location").text(data.trails[1].location);
     $(".t2length").text(data.trails[1].length);
-    $(".t1img").html("<img src=" + trail1image + "></img>");
+    $(".t2img").html("<img src=" + trail2image + "></img>");
     // trail 3
     $(".t3name").text(data.trails[2].name);
     $(".t3difficulty").text(data.trails[2].difficulty);
     $(".t3rating").text(data.trails[2].stars);
     $(".t3location").text(data.trails[2].location);
     $(".t3length").text(data.trails[2].length);
-    $(".t1img").html("<img src=" + trail1image + "></img>");
+    $(".t3img").html("<img src=" + trail3image + "></img>");
     // trail 4
     $(".t4name").text(data.trails[3].name);
     $(".t4difficulty").text(data.trails[3].difficulty);
     $(".t4rating").text(data.trails[3].stars);
     $(".t4location").text(data.trails[3].location);
     $(".t4length").text(data.trails[3].length);
-    $(".t1img").html("<img src=" + trail1image + "></img>");
+    $(".t4img").html("<img src=" + trail4image + "></img>");
     // trail 5
     $(".t5name").text(data.trails[4].name);
     $(".t5difficulty").text(data.trails[4].difficulty);
     $(".t5rating").text(data.trails[4].stars);
     $(".t5location").text(data.trails[4].location);
     $(".t5length").text(data.trails[4].length);
-    $(".t1img").html("<img src=" + trail1image + "></img>");
+    $(".t5img").html("<img src=" + trail5image + "></img>");
     // trail 6
     $(".t6name").text(data.trails[5].name);
     $(".t6difficulty").text(data.trails[5].difficulty);
     $(".t6rating").text(data.trails[5].stars);
     $(".t6location").text(data.trails[5].location);
     $(".t6length").text(data.trails[5].length);
-    $(".t1img").html("<img src=" + trail1image + "></img>");
+    $(".t6img").html("<img src=" + trail6image + "></img>");
     // trail 7
     $(".t7name").text(data.trails[6].name);
     $(".t7difficulty").text(data.trails[6].difficulty);
     $(".t7rating").text(data.trails[6].stars);
     $(".t7location").text(data.trails[6].location);
     $(".t7length").text(data.trails[6].length);
-    $(".t1img").html("<img src=" + trail1image + "></img>");
+    $(".t7img").html("<img src=" + trail7image + "></img>");
     // trail 8
     $(".t8name").text(data.trails[7].name);
     $(".t8difficulty").text(data.trails[7].difficulty);
     $(".t8rating").text(data.trails[7].stars);
     $(".t8location").text(data.trails[7].location);
     $(".t8length").text(data.trails[7].length);
-    $(".t1img").html("<img src=" + trail1image + "></img>");
+    $(".t8img").html("<img src=" + trail8image + "></img>");
     // trail 9
     $(".t9name").text(data.trails[8].name);
     $(".t9difficulty").text(data.trails[8].difficulty);
     $(".t9rating").text(data.trails[8].stars);
     $(".t9location").text(data.trails[8].location);
     $(".t9length").text(data.trails[8].length);
-    $(".t1img").html("<img src=" + trail1image + "></img>");
+    $(".t9img").html("<img src=" + trail9image + "></img>");
     // trail 10
     $(".t10name").text(data.trails[9].name);
     $(".t10difficulty").text(data.trails[9].difficulty);
     $(".t10rating").text(data.trails[9].stars);
     $(".t10location").text(data.trails[9].location);
     $(".t10length").text(data.trails[9].length);
-    $(".t1img").html("<img src=" + trail1image + "></img>");
+    $(".t10img").html("<img src=" + trail10image + "></img>");
   });
 }
 
