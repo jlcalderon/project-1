@@ -1,24 +1,79 @@
-//Variables used in the map
-//let map, infoWindow;
-//let BingMapAPIkey = 'ApOpGVS9mrvMVrJLvz6YkesBOxk9zLXZXh3q2LL0jtwmYvoA19KW55nu9f7lMtZC';
-//Variables to grab user geolocation latitude and longitude
-/* let userLat, userLon;​ */
-//callback function to initializ the map object
-//var map = new Microsoft.sections.Map('#map');
-var map = L.map("map").setView([51.505, -0.09], 14);
-L.tileLayer(
-  "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
-  {
-    attribution:
-      'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: "mapbox/streets-v11",
-    tileSize: 512,
-    zoomOffset: -1,
-    accessToken:
-      "pk.eyJ1Ijoiam9yZ2UtY2FsZGVyb24xIiwiYSI6ImNrZHpiN2l3azJqbzIydG55cHM3djhjMW0ifQ.GDahyKqMw0JTip33YyGVjw",
+//Map API Functions
+let map, infoWindow, userLat, userLon;
+var pos;
+//Initializing the map object
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 44.8115263, lng: -93.3288194 },
+    zoom: 15,
+  });
+  //creating the infowindow element to display location
+  infoWindow = new google.maps.InfoWindow();
+
+  // Try HTML5 geolocation. Getting users's current geolocation
+  if (navigator.geolocation) {
+    //The next lines are going to be executed only if the users allow the browser to grab their location
+    navigator.geolocation.getCurrentPosition(
+      function (position) {
+        pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        };
+        //Filling variables to get users current location and use it later for the weather and hiking api's
+        userLat = pos.lat;
+        userLon = pos.lng;
+
+        infoWindow.setPosition(pos);
+        infoWindow.setContent("You are here!");
+        //infoWindow.open(map);
+        var marker = new google.maps.Marker({
+          position: pos,
+          map: map,
+          title: "You are here",
+        });
+
+        marker.addListener("click", () => {
+          infoWindow.open(map, marker);
+          console.log(JSON.stringify(marker.position));
+        });
+
+        map.setCenter(pos);
+        console.log(`users lat: ${userLat} , users lng: ${userLon}`);
+      },
+      function () {
+        handleLocationError(true, infoWindow, map.getCenter());
+      }
+    );
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
   }
-).addTo(map);
+}
+//Handling errors of geolocation with API methods
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(
+    browserHasGeolocation
+      ? "Error: The Geolocation service failed."
+      : "Error: Your browser doesn't support geolocation."
+  );
+  infoWindow.open(map);
+}
+//Printing users location before user click allow the browser get my location
+console.log(`users lat: ${userLat} , users lng: ${userLon}`);
+
+//Handling errors of geolocation with API methods
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(
+    browserHasGeolocation
+      ? "Error: The Geolocation service failed."
+      : "Error: Your browser doesn't support geolocation."
+  );
+  infoWindow.open(map);
+}
+//Printing users location before user click allow the browser get my location
+console.log(`users lat: ${userLat} , users lng: ${userLon}`);
 
 // hiking
 $(".hikingBtn").on("click", function () {

@@ -17,14 +17,6 @@ h5 {
   color: #d9d9d9;
 }
 
-/* .container {
-      width: 80%;
-      margin: auto;
-      overflow: hidden;
-      background: #d9d9d9;
-      text-align: center;
-  } */
-
 .head {
   margin: auto;
   text-align: center;
@@ -57,13 +49,6 @@ header {
   background: #113859;
   padding: 30px;
 }
-
-​
-/* .form-text {
-  } */
-
-
-/* This is the css for the actual map to display in the screen inside de <div id=map>*/
 
 #map {
   height: 45%;
