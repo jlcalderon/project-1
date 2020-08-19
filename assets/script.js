@@ -86,20 +86,32 @@ function hikingTrailsCall(lat, lng) {
     // trail 1
     $(".t1name").text(data.trails[0].name);
     $(".t1rating").text("Rating: " + data.trails[0].stars + "/5");
-    if (data.trails[0].difficulty == "blue") {
+    if (data.trails[0].difficulty == "green") {
       $(".t1difficulty").text("Difficulty: Easy");
     } else if (data.trails[0].difficulty == "greenBlue") {
+      $(".t1difficulty").text("Difficulty: Easy/Intermediate");
+    } else if (data.trails[0].difficulty == "blue") {
       $(".t1difficulty").text("Difficulty: Intermediate");
+    } else if (data.trails[0].difficulty == "blueBlack") {
+      $(".t1difficulty").text("Difficulty: Difficult");
+    } else if (data.trails[0].difficulty == "dblack") {
+      $(".t1difficulty").text("Difficulty: Extremely Difficult");
     }
     $(".t1location").text(data.trails[0].location);
     $(".t1length").text("Length: " + data.trails[0].length + " miles");
     $(".t1img").html("<img src=" + trail1image + "></img>");
     // trail 2
     $(".t2name").text(data.trails[1].name);
-    if (data.trails[1].difficulty == "blue") {
+    if (data.trails[1].difficulty == "green") {
       $(".t2difficulty").text("Difficulty: Easy");
     } else if (data.trails[1].difficulty == "greenBlue") {
+      $(".t2difficulty").text("Difficulty: Easy/Intermediate");
+    } else if (data.trails[1].difficulty == "blue") {
       $(".t2difficulty").text("Difficulty: Intermediate");
+    } else if (data.trails[1].difficulty == "blueBlack") {
+      $(".t2difficulty").text("Difficulty: Difficult");
+    } else if (data.trails[1].difficulty == "dblack") {
+      $(".t2difficulty").text("Difficulty: Extremely Difficult");
     }
     $(".t2rating").text("Rating: " + data.trails[1].stars + "/5");
     $(".t2location").text(data.trails[1].location);
@@ -107,10 +119,16 @@ function hikingTrailsCall(lat, lng) {
     $(".t2img").html("<img src=" + trail2image + "></img>");
     // trail 3
     $(".t3name").text(data.trails[2].name);
-    if (data.trails[2].difficulty == "blue") {
-      $(".31difficulty").text("Difficulty: Easy");
+    if (data.trails[2].difficulty == "green") {
+      $(".t3difficulty").text("Difficulty: Easy");
     } else if (data.trails[2].difficulty == "greenBlue") {
+      $(".t3difficulty").text("Difficulty: Easy/Intermediate");
+    } else if (data.trails[2].difficulty == "blue") {
       $(".t3difficulty").text("Difficulty: Intermediate");
+    } else if (data.trails[2].difficulty == "blueBlack") {
+      $(".t3difficulty").text("Difficulty: Difficult");
+    } else if (data.trails[2].difficulty == "dblack") {
+      $(".t3difficulty").text("Difficulty: Extremely Difficult");
     }
     $(".t3rating").text("Rating: " + data.trails[2].stars + "/5");
     $(".t3location").text(data.trails[2].location);
@@ -118,10 +136,16 @@ function hikingTrailsCall(lat, lng) {
     $(".t3img").html("<img src=" + trail3image + "></img>");
     // trail 4
     $(".t4name").text(data.trails[3].name);
-    if (data.trails[3].difficulty == "blue") {
+    if (data.trails[3].difficulty == "green") {
       $(".t4difficulty").text("Difficulty: Easy");
     } else if (data.trails[3].difficulty == "greenBlue") {
+      $(".t4difficulty").text("Difficulty: Easy/Intermediate");
+    } else if (data.trails[3].difficulty == "blue") {
       $(".t4difficulty").text("Difficulty: Intermediate");
+    } else if (data.trails[3].difficulty == "blueBlack") {
+      $(".t4difficulty").text("Difficulty: Difficult");
+    } else if (data.trails[3].difficulty == "dblack") {
+      $(".t4difficulty").text("Difficulty: Extremely Difficult");
     }
     $(".t4rating").text("Rating: " + data.trails[3].stars + "/5");
     $(".t4location").text(data.trails[3].location);
@@ -129,10 +153,16 @@ function hikingTrailsCall(lat, lng) {
     $(".t4img").html("<img src=" + trail4image + "></img>");
     // trail 5
     $(".t5name").text(data.trails[4].name);
-    if (data.trails[4].difficulty == "blue") {
-      $(".t4difficulty").text("Difficulty: Easy");
+    if (data.trails[4].difficulty == "green") {
+      $(".t5difficulty").text("Difficulty: Easy");
     } else if (data.trails[4].difficulty == "greenBlue") {
-      $(".t4difficulty").text("Difficulty: Intermediate");
+      $(".t5difficulty").text("Difficulty: Easy/Intermediate");
+    } else if (data.trails[4].difficulty == "blue") {
+      $(".t5difficulty").text("Difficulty: Intermediate");
+    } else if (data.trails[4].difficulty == "blueBlack") {
+      $(".t5difficulty").text("Difficulty: Difficult");
+    } else if (data.trails[4].difficulty == "dblack") {
+      $(".t5difficulty").text("Difficulty: Extremely Difficult");
     }
     $(".t5rating").text("Rating: " + data.trails[4].stars + "/5");
     $(".t5location").text(data.trails[4].location);
@@ -140,10 +170,16 @@ function hikingTrailsCall(lat, lng) {
     $(".t5img").html("<img src=" + trail5image + "></img>");
     // trail 6
     $(".t6name").text(data.trails[5].name);
-    if (data.trails[5].difficulty == "blue") {
+    if (data.trails[5].difficulty == "green") {
       $(".t6difficulty").text("Difficulty: Easy");
     } else if (data.trails[5].difficulty == "greenBlue") {
+      $(".t6difficulty").text("Difficulty: Easy/Intermediate");
+    } else if (data.trails[5].difficulty == "blue") {
       $(".t6difficulty").text("Difficulty: Intermediate");
+    } else if (data.trails[5].difficulty == "blueBlack") {
+      $(".t6difficulty").text("Difficulty: Difficult");
+    } else if (data.trails[5].difficulty == "dblack") {
+      $(".t6difficulty").text("Difficulty: Extremely Difficult");
     }
     $(".t6rating").text("Rating: " + data.trails[5].stars + "/5");
     $(".t6location").text(data.trails[5].location);
@@ -151,10 +187,16 @@ function hikingTrailsCall(lat, lng) {
     $(".t6img").html("<img src=" + trail6image + "></img>");
     // trail 7
     $(".t7name").text(data.trails[6].name);
-    if (data.trails[6].difficulty == "blue") {
+    if (data.trails[6].difficulty == "green") {
       $(".t7difficulty").text("Difficulty: Easy");
     } else if (data.trails[6].difficulty == "greenBlue") {
+      $(".t7difficulty").text("Difficulty: Easy/Intermediate");
+    } else if (data.trails[6].difficulty == "blue") {
       $(".t7difficulty").text("Difficulty: Intermediate");
+    } else if (data.trails[6].difficulty == "blueBlack") {
+      $(".t7difficulty").text("Difficulty: Difficult");
+    } else if (data.trails[6].difficulty == "dblack") {
+      $(".t7difficulty").text("Difficulty: Extremely Difficult");
     }
     $(".t7rating").text("Rating: " + data.trails[6].stars + "/5");
     $(".t7location").text(data.trails[6].location);
@@ -162,10 +204,16 @@ function hikingTrailsCall(lat, lng) {
     $(".t7img").html("<img src=" + trail7image + "></img>");
     // trail 8
     $(".t8name").text(data.trails[7].name);
-    if (data.trails[7].difficulty == "blue") {
+    if (data.trails[7].difficulty == "green") {
       $(".t8difficulty").text("Difficulty: Easy");
     } else if (data.trails[7].difficulty == "greenBlue") {
+      $(".t8difficulty").text("Difficulty: Easy/Intermediate");
+    } else if (data.trails[7].difficulty == "blue") {
       $(".t8difficulty").text("Difficulty: Intermediate");
+    } else if (data.trails[7].difficulty == "blueBlack") {
+      $(".t8difficulty").text("Difficulty: Difficult");
+    } else if (data.trails[7].difficulty == "dblack") {
+      $(".t8difficulty").text("Difficulty: Extremely Difficult");
     }
     $(".t8rating").text("Rating: " + data.trails[7].stars + "/5");
     $(".t8location").text(data.trails[7].location);
@@ -173,10 +221,16 @@ function hikingTrailsCall(lat, lng) {
     $(".t8img").html("<img src=" + trail8image + "></img>");
     // trail 9
     $(".t9name").text(data.trails[8].name);
-    if (data.trails[8].difficulty == "blue") {
+    if (data.trails[8].difficulty == "green") {
       $(".t9difficulty").text("Difficulty: Easy");
     } else if (data.trails[8].difficulty == "greenBlue") {
+      $(".t9difficulty").text("Difficulty: Easy/Intermediate");
+    } else if (data.trails[8].difficulty == "blue") {
       $(".t9difficulty").text("Difficulty: Intermediate");
+    } else if (data.trails[8].difficulty == "blueBlack") {
+      $(".t9difficulty").text("Difficulty: Difficult");
+    } else if (data.trails[8].difficulty == "dblack") {
+      $(".t9difficulty").text("Difficulty: Extremely Difficult");
     }
     $(".t9rating").text("Rating: " + data.trails[8].stars + "/5");
     $(".t9location").text(data.trails[8].location);
@@ -184,10 +238,16 @@ function hikingTrailsCall(lat, lng) {
     $(".t9img").html("<img src=" + trail9image + "></img>");
     // trail 10
     $(".t10name").text(data.trails[9].name);
-    if (data.trails[9].difficulty == "blue") {
+    if (data.trails[9].difficulty == "green") {
       $(".t10difficulty").text("Difficulty: Easy");
     } else if (data.trails[9].difficulty == "greenBlue") {
+      $(".t10difficulty").text("Difficulty: Easy/Intermediate");
+    } else if (data.trails[9].difficulty == "blue") {
       $(".t10difficulty").text("Difficulty: Intermediate");
+    } else if (data.trails[9].difficulty == "blueBlack") {
+      $(".t10difficulty").text("Difficulty: Difficult");
+    } else if (data.trails[9].difficulty == "dblack") {
+      $(".t10difficulty").text("Difficulty: Extremely Difficult");
     }
     $(".t10rating").text("Rating: " + data.trails[9].stars + "/5");
     $(".t10location").text(data.trails[9].location);
