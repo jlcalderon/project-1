@@ -62,7 +62,7 @@ ul {
 }
 @media print, screen and (min-width: 40em) {
   .portfolio-resume-scrolling {
-    height: 585px;
+    height: 795px;
     overflow-y: auto;
     width: 400px;
   }
