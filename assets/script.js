@@ -82,74 +82,113 @@ function hikingTrailsCall(lat, lng) {
     let trail8image = data.trails[7].imgMedium;
     let trail9image = data.trails[8].imgMedium;
     let trail10image = data.trails[9].imgMedium;
-    console.log(trail1image);
 
     // trail 1
     $(".t1name").text(data.trails[0].name);
-    $(".t1difficulty").text("Difficulty: " + data.trails[0].difficulty);
     $(".t1rating").text("Rating: " + data.trails[0].stars + "/5");
+    if (data.trails[0].difficulty == "blue") {
+      $(".t1difficulty").text("Difficulty: Easy");
+    } else if (data.trails[0].difficulty == "greenBlue") {
+      $(".t1difficulty").text("Difficulty: Intermediate");
+    }
     $(".t1location").text(data.trails[0].location);
     $(".t1length").text("Length: " + data.trails[0].length + " miles");
     $(".t1img").html("<img src=" + trail1image + "></img>");
     // trail 2
     $(".t2name").text(data.trails[1].name);
-    $(".t2difficulty").text("Difficulty: " + data.trails[1].difficulty);
+    if (data.trails[1].difficulty == "blue") {
+      $(".t2difficulty").text("Difficulty: Easy");
+    } else if (data.trails[1].difficulty == "greenBlue") {
+      $(".t2difficulty").text("Difficulty: Intermediate");
+    }
     $(".t2rating").text("Rating: " + data.trails[1].stars + "/5");
     $(".t2location").text(data.trails[1].location);
     $(".t2length").text("Length: " + data.trails[1].length + " miles");
     $(".t2img").html("<img src=" + trail2image + "></img>");
     // trail 3
     $(".t3name").text(data.trails[2].name);
-    $(".t3difficulty").text("Difficulty: " + data.trails[2].difficulty);
+    if (data.trails[2].difficulty == "blue") {
+      $(".31difficulty").text("Difficulty: Easy");
+    } else if (data.trails[2].difficulty == "greenBlue") {
+      $(".t3difficulty").text("Difficulty: Intermediate");
+    }
     $(".t3rating").text("Rating: " + data.trails[2].stars + "/5");
     $(".t3location").text(data.trails[2].location);
     $(".t3length").text("Length: " + data.trails[2].length + " miles");
     $(".t3img").html("<img src=" + trail3image + "></img>");
     // trail 4
     $(".t4name").text(data.trails[3].name);
-    $(".t4difficulty").text("Difficulty: " + data.trails[3].difficulty);
+    if (data.trails[3].difficulty == "blue") {
+      $(".t4difficulty").text("Difficulty: Easy");
+    } else if (data.trails[3].difficulty == "greenBlue") {
+      $(".t4difficulty").text("Difficulty: Intermediate");
+    }
     $(".t4rating").text("Rating: " + data.trails[3].stars + "/5");
     $(".t4location").text(data.trails[3].location);
     $(".t4length").text("Length: " + data.trails[3].length + " miles");
     $(".t4img").html("<img src=" + trail4image + "></img>");
     // trail 5
     $(".t5name").text(data.trails[4].name);
-    $(".t5difficulty").text("Difficulty: " + data.trails[4].difficulty);
+    if (data.trails[4].difficulty == "blue") {
+      $(".t4difficulty").text("Difficulty: Easy");
+    } else if (data.trails[4].difficulty == "greenBlue") {
+      $(".t4difficulty").text("Difficulty: Intermediate");
+    }
     $(".t5rating").text("Rating: " + data.trails[4].stars + "/5");
     $(".t5location").text(data.trails[4].location);
     $(".t5length").text("Length: " + data.trails[4].length + " miles");
     $(".t5img").html("<img src=" + trail5image + "></img>");
     // trail 6
     $(".t6name").text(data.trails[5].name);
-    $(".t6difficulty").text("Difficulty: " + data.trails[5].difficulty);
+    if (data.trails[5].difficulty == "blue") {
+      $(".t6difficulty").text("Difficulty: Easy");
+    } else if (data.trails[5].difficulty == "greenBlue") {
+      $(".t6difficulty").text("Difficulty: Intermediate");
+    }
     $(".t6rating").text("Rating: " + data.trails[5].stars + "/5");
     $(".t6location").text(data.trails[5].location);
     $(".t6length").text("Length: " + data.trails[5].length + " miles");
     $(".t6img").html("<img src=" + trail6image + "></img>");
     // trail 7
     $(".t7name").text(data.trails[6].name);
-    $(".t7difficulty").text("Difficulty: " + data.trails[6].difficulty);
+    if (data.trails[6].difficulty == "blue") {
+      $(".t7difficulty").text("Difficulty: Easy");
+    } else if (data.trails[6].difficulty == "greenBlue") {
+      $(".t7difficulty").text("Difficulty: Intermediate");
+    }
     $(".t7rating").text("Rating: " + data.trails[6].stars + "/5");
     $(".t7location").text(data.trails[6].location);
     $(".t7length").text("Length: " + data.trails[6].length + " miles");
     $(".t7img").html("<img src=" + trail7image + "></img>");
     // trail 8
     $(".t8name").text(data.trails[7].name);
-    $(".t8difficulty").text("Difficulty: " + data.trails[7].difficulty);
+    if (data.trails[7].difficulty == "blue") {
+      $(".t8difficulty").text("Difficulty: Easy");
+    } else if (data.trails[7].difficulty == "greenBlue") {
+      $(".t8difficulty").text("Difficulty: Intermediate");
+    }
     $(".t8rating").text("Rating: " + data.trails[7].stars + "/5");
     $(".t8location").text(data.trails[7].location);
     $(".t8length").text("Length: " + data.trails[7].length + " miles");
     $(".t8img").html("<img src=" + trail8image + "></img>");
     // trail 9
     $(".t9name").text(data.trails[8].name);
-    $(".t9difficulty").text("Difficulty: " + data.trails[8].difficulty);
+    if (data.trails[8].difficulty == "blue") {
+      $(".t9difficulty").text("Difficulty: Easy");
+    } else if (data.trails[8].difficulty == "greenBlue") {
+      $(".t9difficulty").text("Difficulty: Intermediate");
+    }
     $(".t9rating").text("Rating: " + data.trails[8].stars + "/5");
     $(".t9location").text(data.trails[8].location);
     $(".t9length").text("Length: " + data.trails[8].length + " miles");
     $(".t9img").html("<img src=" + trail9image + "></img>");
     // trail 10
     $(".t10name").text(data.trails[9].name);
-    $(".t10difficulty").text("Difficulty: " + data.trails[9].difficulty);
+    if (data.trails[9].difficulty == "blue") {
+      $(".t10difficulty").text("Difficulty: Easy");
+    } else if (data.trails[9].difficulty == "greenBlue") {
+      $(".t10difficulty").text("Difficulty: Intermediate");
+    }
     $(".t10rating").text("Rating: " + data.trails[9].stars + "/5");
     $(".t10location").text(data.trails[9].location);
     $(".t10length").text("Length: " + data.trails[9].length + " miles");
