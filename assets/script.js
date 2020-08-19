@@ -63,14 +63,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 //Printing users location before user click allow the browser get my location
 console.log(`users lat: ${userLat} , users lng: ${userLon}`);
 
-// hiking
-/* $(".hikingBtn").on("click", function() {
-    let latEntry = $("input.latEntry").val();
-    let lonEntry = $("input.lonEntry").val();
-    console.log("clicked"); */
-
 console.log(userLat + "," + userLon);
-/* if (latEntry && lonEntry != "") { */
 function hikingTrailsCall(lat, lng) {
   var hikingUrl = `https://www.hikingproject.com/data/get-trails?lat=${lat}&lon=${lng}&key=200874565-62446926939ed189f06ed0cc53a559e6`;
   $.ajax({

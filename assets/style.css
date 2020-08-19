@@ -12,8 +12,13 @@ h1 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-h5 {
-  color: #d9d9d9;
+button {
+  background-color: #f29f80;
+  opacity: 0.75;
+  font-size: larger;
+  font-weight: 900;
+  color: #011640;
+  padding: 20px;
 }
 .head {
   margin: auto;
@@ -26,15 +31,6 @@ header {
   border-radius: 30px;
   margin: 0;
   padding: 0;
-}
-.header {
-  height: 100vh;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: sans-serif;
-  width: 100%;
 }
 .content-wrapper img {
   height: 100vh;
@@ -56,35 +52,6 @@ header {
   color: #ffffff;
   font-size: 5vw;
   font-family: "lobster", cursive;
-}
-.search-field {
-  height: 50px;
-  width: 400px;
-  padding: 10px;
-  border: none;
-  border-radius: 25px;
-}
-.search-btn {
-  height: 50px;
-  width: 150px;
-  background: #f29f80;
-  border: none;
-  outline: none;
-  color: #000;
-  font-size: 20px;
-  border-radius: 20px;
-}
-.search-btn:hover {
-  background: #bf533b;
-  cursor: pointer;
-}
-.form-box {
-  background: #113859;
-  padding: 30px;
-}
-#map {
-  height: 45%;
-  width: 100%;
 }
 .sections {
   margin: auto;
@@ -111,25 +78,14 @@ header {
 ul {
   list-style-type: none;
 }
-.portfolio-resume-overview {
-  /* height: 400px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: relative;
-  opacity: 1;
-  z-index: 0; */
-}
 @media print, screen and (min-width: 40em) {
   .portfolio-resume-scrolling {
     height: 585px;
     overflow-y: auto;
     width: 400px;
   }
+}
+
+footer p {
+  color: #d9d9d9;
 }
