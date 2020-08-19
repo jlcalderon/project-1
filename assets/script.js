@@ -179,8 +179,10 @@ $(document).on("click", ".btn", function () {
   console.log("clicked");
   var search = $("#city");
   var urlquery =
-    "https://api.openweathermap.org/data/2.5/weather?q=" +
-    search.val() +
+    "https://api.openweathermap.org/data/2.5/weather?q=lat=" +
+    userLat +
+    "&lon=" +
+    userLon +
     "&units=imperial&appid=1460cf8db2b228c70ad455e11901c547";
   $.ajax({
     url: urlquery,
