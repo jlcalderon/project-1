@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <meta charset="UTF-8" />
     <title>Day Planner - Project 1</title>
     <!-- Calling our css stylesheet-->
     <link rel="stylesheet" href="assets/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
-
 <body>
 <!--Warapper Start -->
 <div class="content-wrapper">
     <img src="assets/Night-Malaysia.jpg">
     <div class="text-wrapper">
-        <h1> Explore The World!</h1>
+        <h1 style="font-family: 'Lobster', cursive;" >Explore The World! </h1>
     </div>
 </div>
 <!-- Wrapper End -->
-
 <!-- Search Input Start -->
 <!-- <form>
     <div class="form-box">
@@ -36,31 +33,26 @@
     <!-- sections -->
     <div class="grid-x grid-margin-x" style="margin-bottom: 10px;">
         <div class="small-2 large-2 cell"></div>
-        <div class="small-4 large-4 cell" style="background-color: whitesmoke; text-align:center; padding:12px;">
-            <p>I want to choose my destination</p>
-            <button style="padding:20px; border: 1px solid black">GO</button>
+        <div class="small-4 large-4 cell" style="text-align:center; padding:12px;">
+            <button style="background-color:#f29f80 ; opacity: 0.75; font-size: larger; font-weight: 900; color: #011640; padding:20px; padding:20px; border;" >Select Destination</button>
         </div>
-        <div class="small-4 large-4 cell" style="background-color: whitesmoke; text-align:center; padding:12px;">
-            <p>Show me places nearby my current location</p>
-            <button style="padding:20px; border: 1px solid black">GO</button>
+        <div class="small-4 large-4 cell" style="text-align:center; padding:12px;">
+            <button style="background-color: #f29f80; opacity: 0.75; font-size: larger; font-weight: 900; color: #011640; padding:20px;">Show Places Near Me</button>
         </div>
         <div class="small-2 large-2 cell"></div>
     </div>
-
-
     <div class="cell small-4">
         <section class="sections">
             <div class="sectionsCard">
                 <div class="card-divider">
                     <div class="column">
                         <!-- Here the map is going to be rendered -->
-                        <div id="map" style="height: 450px; width: 925px; margin-bottom: 5px;"></div>
+                        <div id="map" style="height: 840px; width: 925px; margin-bottom: 0px;"></div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-
     <br>
     <div class="cell small-4">
         <section class="sections">
@@ -82,7 +74,6 @@
                                     <li class="t1length">Trail Length</li>
                                     <li class="t1condition">Trail Condition</li>
                                 </ul>
-
                                 <ul class="portfolio-resume-side-list">
                                     <li class="t2name">Trail Name</li>
                                     <li class="t2difficulty">Trail Difficulty</li>
@@ -165,7 +156,7 @@
             <section class="sections">
                 <div class="sectionsCard">
                     <div class="card-divider">
-                        <h4>Weather</h4>
+                        <h4> Weather</h4>
                         <div class="column">
                             <p class="desc"></p>
                             <img class="icon" />
@@ -178,7 +169,7 @@
         </div>
         <!-- Footer Start -->
         <footer class="section grey darken-2 white-text center">
-            <p class="flow-text"> Travel Project 2020 </p>
+            <p class="flow-text" style="color: #d9d9d9;"> Travel Project 2020 </p>
         </footer>
         <!-- Footer End -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -187,5 +178,4 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzGskOH17cENtd_IFBd9wLhSTfhC7vxls&callback=initMap" defer></script>
         <script src="assets/script.js"></script>
 </body>
-
 </html>
