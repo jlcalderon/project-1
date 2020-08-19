@@ -1,14 +1,77 @@
-//Map API Functions
+//Global variables
+let urlgeocoding;
+var marker;
 let map, infoWindow, userLat, userLon;
 var pos;
+
+
+$('form').on("submit", function(e) {
+    //Grabing user input of destination
+    e.preventDefault();
+    const city = $('#city-text').val();
+    const state = $('#state-text').val();
+    console.log(`${city} and ${state}`);
+
+
+
+    //Show weather, trails and map at destination
+    $(document).ready(function() {
+        urlgeocoding = `https://maps.googleapis.com/maps/api/geocode/json?address=${city}+${state}&key=AIzaSyCzGskOH17cENtd_IFBd9wLhSTfhC7vxls`;
+        $.ajax({
+            url: urlgeocoding,
+            method: "GET"
+        }).then(function(response) {
+            userLat = response.results[0].geometry.location.lat;
+            userLon = response.results[0].geometry.location.lng;
+            getWeatherByLatLng(userLat, userLon);
+            hikingTrailsCallByLatLng(userLat, userLon);
+            //Show map marker point
+            pos = {
+                lat: userLat,
+                lng: userLon
+            }
+            reRenderMap(pos);
+        });
+    });
+
+});
+
+//Get users location
+$('#btn-location').on("click", function() {
+    getUsersCurrentLocation();
+});
+
+//Rendering the map of users destination
+function reRenderMap(pos) {
+    infoWindow = new google.maps.InfoWindow;
+    infoWindow.setPosition(pos);
+    infoWindow.setContent('Your destination is here');
+    //infoWindow.open(map);
+    marker = new google.maps.Marker({
+        position: pos,
+        map: map,
+        title: "Your destination is here"
+    });
+
+    marker.addListener("click", () => {
+        infoWindow.open(map, marker);
+        console.log(JSON.stringify(marker.position));
+    });
+
+    map.setCenter(pos);
+}
+
 //Initializing the map object
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: 44.8115263, lng: -93.3288194 },
         zoom: 15
     });
+}
+
+function getUsersCurrentLocation() {
     //creating the infowindow element to display location
-    infoWindow = new google.maps.InfoWindow;
+
 
     // Try HTML5 geolocation. Getting users's current geolocation
     if (navigator.geolocation) { //The next lines are going to be executed only if the users allow the browser to grab their location
@@ -20,12 +83,13 @@ function initMap() {
             //Filling variables to get users current location and use it later for the weather and hiking api's
             userLat = pos.lat;
             userLon = pos.lng;
-            hikingTrailsCall(userLat, userLon);
-            getWeather(userLat, userLon);
+            hikingTrailsCallByLatLng(userLat, userLon);
+            getWeatherByLatLng(userLat, userLon);
+            infoWindow = new google.maps.InfoWindow;
             infoWindow.setPosition(pos);
             infoWindow.setContent('You are here!');
             //infoWindow.open(map);
-            var marker = new google.maps.Marker({
+            marker = new google.maps.Marker({
                 position: pos,
                 map: map,
                 title: "You are here"
@@ -46,7 +110,6 @@ function initMap() {
         handleLocationError(false, infoWindow, map.getCenter());
     }
 
-
 }
 //Handling errors of geolocation with API methods
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -59,15 +122,10 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 //Printing users location before user click allow the browser get my location
 console.log(`users lat: ${userLat} , users lng: ${userLon}`);
 
-// hiking
-/* $(".hikingBtn").on("click", function() {
-    let latEntry = $("input.latEntry").val();
-    let lonEntry = $("input.lonEntry").val();
-    console.log("clicked"); */
-
+// hiking cal by lat and lng
 console.log(userLat + "," + userLon);
-/* if (latEntry && lonEntry != "") { */
-function hikingTrailsCall(lat, lng) {
+
+function hikingTrailsCallByLatLng(lat, lng) {
     var hikingUrl = `https://www.hikingproject.com/data/get-trails?lat=${lat}&lon=${lng}&key=200874565-62446926939ed189f06ed0cc53a559e6`;
     $.ajax({
         url: hikingUrl,
@@ -147,16 +205,29 @@ function hikingTrailsCall(lat, lng) {
     });
 }
 
-// weather
-function getWeather(latitude, longitude) {
+// weather call by lat and lng
+function getWeatherByLatLng(latitude, longitude) {
 
-    var urlquery = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=1460cf8db2b228c70ad455e11901c547`;
+    let urlqueryLatLng = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=1460cf8db2b228c70ad455e11901c547`;
     $.ajax({
-        url: urlquery,
+        url: urlqueryLatLng,
         method: "GET",
     }).then(function(response) {
         $(".temp").text("Current Weather: " + response.weather[0].description);
         $(".desc").text("temperature: " + response.main.temp);
+        $(".wind").text("Curret Windspeed: " + response.wind.speed);
+        $(".icon").attr("src", `https://openweathermap.org/img/w/${response.weather[0].icon}.png`);
+    });
+}
+
+function getWeatherByDestination(city, state) {
+    let urlqueryDestination = `https://api.openweathermap.org/data/2.5/weather?q=${city},${state}&units=imperial&appid=1460cf8db2b228c70ad455e11901c547`;
+    $.ajax({
+        url: urlqueryDestination,
+        method: "GET"
+    }).then(function(response) {
+        $(".temp").text("Current Weather: " + response.weather[0].description);
+        $(".desc").text("Temperature: " + response.main.temp);
         $(".wind").text("Curret Windspeed: " + response.wind.speed);
         $(".icon").attr("src", `https://openweathermap.org/img/w/${response.weather[0].icon}.png`);
     });
