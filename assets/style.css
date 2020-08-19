@@ -68,6 +68,10 @@ ul {
   }
 }
 
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+
 footer p {
   color: #d9d9d9;
 }

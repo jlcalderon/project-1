@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
     <title>Day Planner - Project 1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/motion-ui@1.2.3/dist/motion-ui.min.css" />
     <!-- Calling our css stylesheet-->
     <link rel="stylesheet" href="assets/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
@@ -19,14 +20,14 @@
 </div>
 <!-- Wrapper End -->
 <br>
-    <!-- sections -->
+<!-- sections -->
     <div class="grid-x grid-margin-x" style="margin-bottom: 10px;">
         <div class="small-2 large-2 cell"></div>
         <div class="small-4 large-4 cell" style="text-align:center; padding:12px;">
-            <button >Select Destination</button>
+            <button id="btn-destination" data-open="destinationform">Select Destination</button>
         </div>
         <div class="small-4 large-4 cell" style="text-align:center; padding:12px;">
-            <button>Show Places Near Me</button>
+            <button id="btn-location">Show Places Near Me</button>
         </div>
         <div class="small-2 large-2 cell"></div>
     </div>
@@ -63,6 +64,7 @@
                                     <li class="t1length">Trail Length</li>
                                     <li class="t1img"></li>
                                 </ul>
+                                <hr class="solid">
                                 <ul class="portfolio-resume-side-list">
                                     <li class="t2name">Trail Name</li>
                                     <li class="t2difficulty">Trail Difficulty</li>
@@ -71,6 +73,7 @@
                                     <li class="t2length">Trail Length</li>
                                     <li class="t2img"></li>
                                 </ul>
+                                <hr class="solid">
                                 <ul class="portfolio-resume-side-list">
                                     <li class="t3name">Trail Name</li>
                                     <li class="t3difficulty">Trail Difficulty</li>
@@ -79,6 +82,7 @@
                                     <li class="t3length">Trail Length</li>
                                     <li class="t3img"></li>
                                 </ul>
+                                <hr class="solid">
                                 <ul class="portfolio-resume-side-list">
                                     <li class="t4name">Trail Name</li>
                                     <li class="t4difficulty">Trail Difficulty</li>
@@ -87,6 +91,7 @@
                                     <li class="t4length">Trail Length</li>
                                     <li class="t4img"></li>
                                 </ul>
+                                <hr class="solid">
                                 <ul class="portfolio-resume-side-list">
                                     <li class="t5name">Trail Name</li>
                                     <li class="t5difficulty">Trail Difficulty</li>
@@ -95,6 +100,7 @@
                                     <li class="t5length">Trail Length</li>
                                     <li class="t5img"></li>
                                 </ul>
+                                <hr class="solid">
                                 <ul class="portfolio-resume-side-list">
                                     <li class="t6name">Trail Name</li>
                                     <li class="t6difficulty">Trail Difficulty</li>
@@ -103,6 +109,7 @@
                                     <li class="t6length">Trail Length</li>
                                     <li class="t6img"></li>
                                 </ul>
+                                <hr class="solid">
                                 <ul class="portfolio-resume-side-list">
                                     <li class="t7name">Trail Name</li>
                                     <li class="t7difficulty">Trail Difficulty</li>
@@ -111,6 +118,7 @@
                                     <li class="t7length">Trail Length</li>
                                     <li class="t7img"></li>
                                 </ul>
+                                <hr class="solid">
                                 <ul class="portfolio-resume-side-list">
                                     <li class="t8name">Trail Name</li>
                                     <li class="t8difficulty">Trail Difficulty</li>
@@ -119,6 +127,7 @@
                                     <li class="t8length">Trail Length</li>
                                     <li class="t8img"></li>
                                 </ul>
+                                <hr class="solid">
                                 <ul class="portfolio-resume-side-list">
                                     <li class="t9name">Trail Name</li>
                                     <li class="t9difficulty">Trail Difficulty</li>
@@ -127,6 +136,7 @@
                                     <li class="t9length">Trail Length</li>
                                     <li class="t9img"></li>
                                 </ul>
+                                <hr class="solid">
                                 <ul class="portfolio-resume-side-list">
                                     <li class="t10name">Trail Name</li>
                                     <li class="t10difficulty">Trail Difficulty</li>
@@ -157,6 +167,22 @@
                 </div>
             </section>
         </div>
+
+        <!-- Modal window to get user input of destination-->
+        <div class="reveal " id="destinationform" data-reveal>
+            <!-- Search Input Start -->
+            <h1>Type your destination</h1>
+            <form>
+                <div class="form-box">
+                    <input id="city-text" type="text" class="search-field destination" placeholder="Type city" />
+                    <input id="state-text" type="text" class="search-field destination" placeholder="Type State" />
+                    <button data-index="btn-destination" type="submit" style="padding:20px; border: 1px solid white; color:white;" type="button">Submit</button>
+                </div>
+            </form>
+            <!-- Search Input Ends -->
+            <button class="close-button" data-close aria-label="Close Modal" type="button"><span aria-hidden="true">&times;</span></button>
+        </div>
+
         <!-- Footer Start -->
         <footer class="section grey darken-2 white-text center">
             <p class="flow-text"> Travel Project 2020 </p>
@@ -164,6 +190,9 @@
         <!-- Footer End -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+        <script>
+            $(document).foundation();
+        </script>
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzGskOH17cENtd_IFBd9wLhSTfhC7vxls&callback=initMap" defer></script>
         <script src="assets/script.js"></script>
