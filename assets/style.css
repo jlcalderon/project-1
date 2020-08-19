@@ -7,7 +7,7 @@ body {
     background-color: #011640;
 }
 
-​h1 {
+h1 {
     background-color: #011640;
     color: #d9d9d9;
     border-radius: 20px;
@@ -28,6 +28,51 @@ header {
     padding: 5px;
     font-size: 25px;
     border-radius: 30px;
+=======
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  width: 100%;
+}
+
+.content-wrapper img {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url(Night-Malaysia.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  width: 100%;
+}
+
+.text-wrapper {
+  width: 100%;
+  position: relative;
+  margin-top: -40%;
+}
+
+.text-wrapper h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 5vw;
+  font-family: "lobster", cursive;
+}
+
+.search-field {
+  height: 50px;
+  width: 400px;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
 }
 
 .search-btn {
@@ -45,7 +90,6 @@ header {
     background: #bf533b;
     cursor: pointer;
 }
-
 .form-box {
     background: #113859;
     padding: 30px;
@@ -57,13 +101,13 @@ header {
 }
 
 .sections {
-    margin: 0 auto;
-    background: #f29f80;
-    height: 900px;
-    width: 1200px;
-    display: flex;
-    justify-content: center;
-    position: relative;
+  margin: auto;
+  background: #f29f80;
+  height: 900px;
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 
 .sectionsCard {
