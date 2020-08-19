@@ -79,6 +79,9 @@ header {
 }
 
 /* hiking scroll box */
+ul {
+  list-style-type: none;
+}
 
 .portfolio-resume-overview {
   height: 400px;
