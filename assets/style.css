@@ -15,7 +15,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color: #011640;
+    background-color: #e9e9e9;
 }
 
 h1 {
@@ -25,17 +25,17 @@ h1 {
 }
 
 button {
-    background-color: #f29f80;
+    background-color: snow;
     opacity: 0.75;
     font-size: larger;
     font-weight: 900;
-    color: #011640;
+    /* color: #011640; */
     padding: 20px;
 }
 
 .content-wrapper img {
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url(Night-Malaysia.jpg);
+   /* background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url(Night-Malaysia.jpg); */
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -59,7 +59,8 @@ button {
 
 .sections {
     margin: auto;
-    background: #f29f80;
+    background: snow;
+    /* opacity: 0.90 */;
     background-blend-mode: 0.5;
     height: 900px;
     width: 1200px;
@@ -95,7 +96,6 @@ hr.solid {
 }
 
 footer p {
-    color: #d9d9d9;
     text-align: center;
 }
 
