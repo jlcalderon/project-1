@@ -13,7 +13,7 @@ $("form").on("submit", function(e) {
 
     //Show weather, trails and map at destination
     $(document).ready(function() {
-        urlgeocoding = `https://maps.googleapis.com/maps/api/geocode/json?address=${city}+${state}&key=AIzaSyCzGskOH17cENtd_IFBd9wLhSTfhC7vxls`;
+        urlgeocoding = `https://maps.googleapis.com/maps/api/geocode/json?address=${city}+${state}&key=AIzaSyBzVaVj8l-aJXLt6HOA_Ks7LAB6X9ONJyE`;
         $.ajax({
             url: urlgeocoding,
             method: "GET",
