@@ -1,4 +1,4 @@
-# Project 1
+# Trails Finder
 
 ![Demo](./assets/trails-finder.gif)
 
