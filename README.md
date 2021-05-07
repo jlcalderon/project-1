@@ -17,16 +17,16 @@ Users need to allow the browser to use thier location.
 To get better results run this application on a modern web browser and allow the browser to keep track of your location as is described previously. 
 
 ## Tech Aspects
-## API's Services
+# API's Services
 We used APIs from *Adenture Projects Inc*, *Google Maps with Geocoding and Geolocation Services*, and *Open Weather*
 To make the API calls this app rely on Ajax functions from the JQuery library.
 
-## CSS Library Framework 
+# CSS Library Framework 
 We used *Foundation* as our CSS library [Learn more about Foundation CSS](https://get.foundation/)
 There are also some specific css classes/rules that were written for UI details
 
-## DOM Manipulation
-In this project DOM is manupulated using plain Javascript and the library JQuery interacting with the HTML elements 
+# DOM Manipulation
+In this project DOM is manupulated using plain Vanilla Javascript and the library JQuery interacting with the HTML elements 
 
 ## Contributing
 ### Front End Team
